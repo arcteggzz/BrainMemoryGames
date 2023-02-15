@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drinking Game</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-    <button>start game</button>
-    <h1>Level 0</h1>
-    <div class="boxes">
-        <div class=" box box-1" data-key="1"></div>
-        <div class=" box box-2" data-key="2"></div>
-        <div class=" box box-3" data-key="3"></div>
-        <div class=" box box-4" data-key="4"></div>
-        <div class=" box box-5" data-key="5"></div>
-        <div class=" box box-6" data-key="6"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>BrainGames</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button>start game</button>
+      <h1>Level 0</h1>
+      <div class="boxes">
+        <div class="box box-1" data-key="1">
+          <img src="/images/mbappe.jpg" alt="" class="" />
+        </div>
+        <div class="box box-2" data-key="2">
+          <img src="/images/messi.png" alt="" class="" />
+        </div>
+        <div class="box box-3" data-key="3">
+          <img src="/images/neymar.jpg" alt="" class="" />
+        </div>
+        <div class="box box-4" data-key="4">
+          <img src="/images/ronaldo.jpg" alt="" class="" />
+        </div>
+        <div class="box box-5" data-key="5">
+          <img src="/images/lewandowksi.jpg" alt="" class="" />
+        </div>
+        <div class="box box-6" data-key="6">
+          <img src="/images/suarez.jpg" alt="" class="" />
+        </div>
+      </div>
     </div>
-
-
+    <footer>oghenetega esedere @ 2023</footer>
 
     <audio src="./sounds/tom.wav" class="audio" data-key="1"></audio>
     <audio src="./sounds/clap.wav" class="audio" data-key="2"></audio>
@@ -29,11 +47,8 @@
     <audio src="./sounds/openhat.wav" class="audio" data-key="5"></audio>
     <audio src="./sounds/snare.wav" class="audio" data-key="6"></audio>
 
-    <audio src="./sounds/Will_You_Keep_Quiet_-_Comedy_Sound_Effects_(HQ).mp3" class="audio" data-key="7"></audio>
-    <audio src="./sounds/DUN_DUN_DUUUUN!!!_(Dramatic_Sound_Effect).mp3" class="audio" data-key="8"></audio>
-    <audio src="./sounds/Sound_Effect_Onichan-Daisuki.mp3" class="audio" data-key="9"></audio>
-    <audio src="./sounds/Sound_Effect_Anta_Baka!!.mp3" class="audio" data-key="10"></audio>
+    <audio src="./sounds/dun_dun_dun.wav" class="audio" data-key="7"></audio>
 
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>

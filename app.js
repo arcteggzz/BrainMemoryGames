@@ -29,7 +29,7 @@ function playRound() {
     //a. get human move
     let humanMove = this.dataset.key;
     //b. flash move
-    flashBox(humanMove);
+    flashBox(humanMove, true);
     //c. play audio
     playAudio(humanMove);
     //check if move is correct
@@ -38,12 +38,12 @@ function playRound() {
     moveCounter++;
     if (isCorrect) {
       //inidicate game state on screen
-      console.log("correct");
+      // console.log("correct");
       //update game state variables
       gameIsActive = true;
       if (moveCounter == computerMoves.length) {
         //indicate that you have completed this round
-        console.log("right");
+        // console.log("right");
         //update the level on screen
         h1Text.textContent = `Level ${moveCounter}`;
         //generate computer next move
@@ -54,11 +54,12 @@ function playRound() {
       }
     } else {
       //inidicate game state on screen
-      console.log("wrong");
+      // console.log("wrong");
       //play fail audio
       const funSong = 7;
       playAudio(funSong);
       //display fail screen
+      // document.body.removeProperty("background-image");
       document.body.classList.add("correct");
       //reset all game state variables
       gameIsActive = false;
@@ -78,8 +79,8 @@ function startGame() {
   //function below does three things.
   //get computer move number, show move and play audio
   generateComputerNextMove();
-  console.log(computerMoves);
-  console.log(playerTurn);
+  // console.log(computerMoves);
+  // console.log(playerTurn);
 }
 
 function generateComputerNextMove() {
@@ -89,10 +90,10 @@ function generateComputerNextMove() {
   computerMoves.push(computerNewMove);
   setTimeout(() => {
     //3. flash to incdicate human move
-    flashBox(computerNewMove);
+    flashBox(computerNewMove, false);
     //4. play audio
     playAudio(computerNewMove);
-  }, 2000);
+  }, 1250);
 }
 
 function getComputerMove() {
@@ -106,9 +107,13 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-function flashBox(number) {
+function flashBox(number, humanMove) {
   newBox = document.querySelector(`.box[data-key="${number}"]`);
-  newBox.classList.add("clicked");
+  if (humanMove) {
+    newBox.classList.add("clicked");
+  } else {
+    newBox.classList.add("highlighted");
+  }
 }
 
 function playAudio(number) {
@@ -127,7 +132,8 @@ function checker(numA, numB) {
 }
 
 boxes.forEach((box) =>
-  box.addEventListener("transitionend", (e) =>
-    e.target.classList.remove("clicked")
-  )
+  box.addEventListener("transitionend", (e) => {
+    e.target.classList.remove("clicked");
+    e.target.classList.remove("highlighted");
+  })
 );

@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -13,16 +13,18 @@ body {
   width: 100%;
   height: 100vh;
   margin: auto 0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     95.2deg,
     rgba(173, 252, 234, 1) 26.8%,
     rgba(192, 229, 246, 1) 64%
-  );
+  ); */
+  background: #001530;
   position: relative;
 }
 
 h1 {
   font-weight: 800;
+  color: white;
 }
 
 .container {
@@ -33,17 +35,17 @@ h1 {
 }
 
 .correct {
-  background-image: url("nil");
+  background-image: url('nil');
   background-color: #daaeae;
 }
 
 button {
   width: 60%;
   max-width: 120px;
-  background-color: #7f56d9;
+  background-color: #0a4aaa;
   color: white;
   padding: 12px 20px;
-  border-radius: 32px;
+  border-radius: 18px;
   border: none;
   cursor: pointer;
   margin: 1rem;
@@ -52,7 +54,7 @@ button {
 }
 
 button:hover {
-  background-color: #a188d6;
+  background-color: #416baa;
 }
 
 .boxes {
@@ -79,7 +81,7 @@ button:hover {
 
 .highlighted {
   transform: scale(1.2);
-  border-color: rgb(0, 89, 255);
+  border-color: rgb(255, 0, 0);
   box-shadow: 0 0 1rem rgb(255, 0, 0);
 }
 
@@ -98,4 +100,6 @@ button:hover {
 footer {
   position: absolute;
   bottom: 0;
+  color: white;
+  padding: 0 0 12px 0;
 }
